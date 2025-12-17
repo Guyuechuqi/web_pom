@@ -5,7 +5,7 @@
   title: 注册成功
   url: /cn/customer/account/register
   payload:
-    account: 18817700000
+    account: 18817888888
     password: 123456
     conf_pass: 123456
   validate:

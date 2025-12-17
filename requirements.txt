@@ -3,3 +3,4 @@ selenium~=4.33.0
 PyYAML~=6.0.3
 requests~=2.32.5
 allure-python-commons~=2.14.2
+allure-pytest

@@ -3,7 +3,7 @@ import pytest
 from common.yaml_util import read_yaml
 from page_objects.register_page import RegisterPage
 
-@pytest.mark.skip
+# @pytest.mark.skip
 class TestRegister:
     @pytest.mark.parametrize("case_info", read_yaml("register_data.yaml"))
     def test_register(self, driver, case_info):

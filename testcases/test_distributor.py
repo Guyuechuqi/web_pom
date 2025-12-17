@@ -3,7 +3,7 @@ import pytest
 from common.yaml_util import read_yaml
 from page_objects.distributor_page import DistributorPage
 
-@pytest.mark.skip
+# @pytest.mark.skip
 class TestDistributor:
     @pytest.mark.parametrize("case_info", read_yaml("distributor_data.yaml"))
     def test_distributor(self, login_driver, case_info):
