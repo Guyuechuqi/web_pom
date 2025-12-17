@@ -1,0 +1,71 @@
+-
+  epic: fecshop项目
+  feature: 分销商申请模块
+  story: 分销商申请成功
+  title: 申请成功
+  url: /cn/distribute/account/register
+  payload:
+      name: 周晨飞
+      phone: 18817750834
+      qq: 123456789
+      id_card: 256981235975489542
+      referrer: 9876543210
+      id_positive: dog.png
+      id_reverse: dog.png
+  validate:
+    equals:
+      "浏览器当前的url：我们已经收到您的分销商请求，请耐心等待，如果您想修改您的请求内容，可以重新提交": [correct_msg, "我们已经收到您的分销商请求，请耐心等待，如果您想修改您的请求内容，可以重新提交"]
+
+-
+  epic: fecshop项目
+  feature: 分销商申请模块
+  story: 分销商申请失败
+  title: 未输入姓名
+  url: /cn/distribute/account/register
+  payload:
+      name:
+      phone: 18817750834
+      qq: 123456789
+      id_card: 256981235975489542
+      referrer: 9876543210
+      id_positive: dog.png
+      id_reverse: dog.png
+  validate:
+    equals:
+      "弹出结果：请输入您的姓名": [error_msg, "请输入您的姓名"]
+
+-
+  epic: fecshop项目
+  feature: 分销商申请模块
+  story: 分销商申请失败
+  title: 未输入手机号
+  url: /cn/distribute/account/register
+  payload:
+      name: 周晨飞
+      phone:
+      qq: 123456789
+      id_card: 256981235975489542
+      referrer: 9876543210
+      id_positive: dog.png
+      id_reverse: dog.png
+  validate:
+    equals:
+      "弹出结果：Please input the telephone": [error_msg, "Please input the telephone"]
+
+-
+  epic: fecshop项目
+  feature: 分销商申请模块
+  story: 分销商申请成功
+  title: 申请成功——未输入推荐人
+  url: /cn/distribute/account/register
+  payload:
+      name: 周晨飞
+      phone: 18817750834
+      qq: 123456789
+      id_card: 256981235975489542
+      referrer:
+      id_positive: dog.png
+      id_reverse: dog.png
+  validate:
+    equals:
+      "浏览器当前的url：我们已经收到您的分销商请求，请耐心等待，如果您想修改您的请求内容，可以重新提交": [correct_msg, "我们已经收到您的分销商请求，请耐心等待，如果您想修改您的请求内容，可以重新提交"]

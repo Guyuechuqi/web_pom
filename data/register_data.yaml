@@ -1,0 +1,83 @@
+-
+  epic: fecshop项目
+  feature: 注册模块
+  story: 用户注册成功
+  title: 注册成功
+  url: /cn/customer/account/register
+  payload:
+    account: 18817700000
+    password: 123456
+    conf_pass: 123456
+  validate:
+    equals:
+      "浏览器当前的url：http://fecyo.fecshop.com/cn/customer/account": [current_url, "http://fecyo.fecshop.com/cn/customer/account"]
+
+-
+  epic: fecshop项目
+  feature: 注册模块
+  story: 用户注册失败
+  title: 输入已注册的手机号
+  url: /cn/customer/account/register
+  payload:
+    account: 18817750834
+    password: 123456
+    conf_pass: 123456
+  validate:
+    equals:
+      "弹出结果：this phone is exist!": [error_msg, "this phone is exist!"]
+
+-
+  epic: fecshop项目
+  feature: 注册模块
+  story: 用户注册失败
+  title: 输入小于6个字符的密码
+  url: /cn/customer/account/register
+  payload:
+    account: 18817740000
+    password: 123
+    conf_pass: 123
+  validate:
+    equals:
+      "弹出结果：Password应该包含至少6个字符。": [error_msg, "Password应该包含至少6个字符。"]
+
+-
+  epic: fecshop项目
+  feature: 注册模块
+  story: 用户注册失败
+  title: 未输入手机号
+  url: /cn/customer/account/register
+  payload:
+    account:
+    password: 123456
+    conf_pass: 123456
+  validate:
+    equals:
+      "弹出结果：Please input the phone": [error_msg, "Please input the phone"]
+
+-
+  epic: fecshop项目
+  feature: 注册模块
+  story: 用户注册失败
+  title: 未输入密码
+  url: /cn/customer/account/register
+  payload:
+    account: 18817740000
+    password:
+    conf_pass: 123456
+  validate:
+    equals:
+      "弹出结果：请输入密码": [error_msg, "请输入密码"]
+
+-
+  epic: fecshop项目
+  feature: 注册模块
+  story: 用户注册失败
+  title: 未输入确认密码
+  url: /cn/customer/account/register
+  payload:
+    account: 18817740000
+    password: 123456
+    conf_pass:
+  validate:
+    equals:
+      "弹出结果：请输入确认密码": [error_msg, "请输入确认密码"]
