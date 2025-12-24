@@ -17,7 +17,7 @@ def driver():
 @pytest.fixture(scope="function")
 def login_driver(driver):
     login_page = LoginPage(driver)
-    login_page.login("/cn/customer/account/login", "18817750834", "123456")
+    login_page.login("/cn/customer/account/login", "username", "password")
     yield driver
 
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
