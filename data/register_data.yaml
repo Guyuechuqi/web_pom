@@ -19,7 +19,7 @@
   title: 输入已注册的手机号
   url: /cn/customer/account/register
   payload:
-    account: 18817750834
+    account: phone
     password: 123456
     conf_pass: 123456
   validate:
