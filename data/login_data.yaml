@@ -5,8 +5,8 @@
   title: 登录成功
   url: /cn/customer/account/login
   payload:
-    account: 18817750834
-    password: 123456
+    account: phone
+    password: password
   validate:
     equals:
       "浏览器当前的url：http://fecyo.fecshop.com/cn/customer/account": [current_url, "http://fecyo.fecshop.com/cn/customer/account"]
@@ -18,8 +18,8 @@
   title: 输入未注册的手机号
   url: /cn/customer/account/login
   payload:
-    account: 18817750835
-    password: 123456
+    account: phone
+    password: password
   validate:
     equals:
       "弹出结果：phone is not exist": [error_msg, "phone is not exist"]
@@ -31,8 +31,8 @@
   title: 输入错误的密码
   url: /cn/customer/account/login
   payload:
-    account: 18817750834
-    password: 1234567
+    account: phone
+    password: password
   validate:
     equals:
       "弹出结果：用户的账号密码不正确": [error_msg, "用户的账号密码不正确"]
@@ -44,8 +44,8 @@
   title: 输入不符合规范的手机号
   url: /cn/customer/account/login
   payload:
-    account: 188177
-    password: 123456
+    account: phone
+    password: password
   validate:
     equals:
       "弹出结果：Phone是无效的。": [error_msg, "Phone是无效的。"]
@@ -57,8 +57,8 @@
   title: 输入错误的密码
   url: /cn/customer/account/login
   payload:
-    account: 18817750834
-    password: 1234
+    account: phone
+    password: password
   validate:
     equals:
       "弹出结果：用户的账号密码不正确": [error_msg, "用户的账号密码不正确"]
@@ -70,7 +70,7 @@
   title: 未输入密码
   url: /cn/customer/account/login
   payload:
-    account: 18817750834
+    account: phone
     password:
   validate:
     equals:
@@ -84,7 +84,7 @@
   url: /cn/customer/account/login
   payload:
     account:
-    password: 123456
+    password: password
   validate:
     equals:
       "弹出结果：Please input the phone": [error_msg, "Please input the phone"]
