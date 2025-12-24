@@ -5,8 +5,8 @@
   title: 申请成功
   url: /cn/distribute/account/register
   payload:
-      name: 周晨飞
-      phone: 18817750834
+      name: name
+      phone: phone
       qq: 123456789
       id_card: 256981235975489542
       referrer: 9876543210
@@ -24,7 +24,7 @@
   url: /cn/distribute/account/register
   payload:
       name:
-      phone: 18817750834
+      phone: phone
       qq: 123456789
       id_card: 256981235975489542
       referrer: 9876543210
@@ -41,7 +41,7 @@
   title: 未输入手机号
   url: /cn/distribute/account/register
   payload:
-      name: 周晨飞
+      name: name
       phone:
       qq: 123456789
       id_card: 256981235975489542
@@ -59,8 +59,8 @@
   title: 申请成功——未输入推荐人
   url: /cn/distribute/account/register
   payload:
-      name: 周晨飞
-      phone: 18817750834
+      name: name
+      phone: phone
       qq: 123456789
       id_card: 256981235975489542
       referrer:
